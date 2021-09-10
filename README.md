@@ -6,11 +6,11 @@
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 18/0106970  |  Matheus Gabriel Alves Rodrigues |
+| 18/0129287 |  Pedro Henrique Vieira Lima |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+O Projeto consiste em trabalhar utilizando os dados existentes no arquivo `vgsales.csv` de maneira a utilizar os algoritmos de dividir para conquistar como **MergeSort**.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
