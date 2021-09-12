@@ -7,8 +7,19 @@
   <body>
     <h1>Escolha a quantidade</h1>
     <form action="/" method="post">
-            Reverse:<input type="number" name="reverse">
-            Flag:<input type="text" name="flag">
+            <!-- Reverse:<input type="number" name="reverse"> -->
+            <!-- Flag:<input type="text" name="flag"> -->
+            Reverse:
+            <select name="reverse">
+              <option value="0">Falso</option>
+              <option value="1">True</option>
+            </select>
+            Flag:
+            <select name="flag">
+              <option value="name">Name</option>
+              <option value="year">Year</option>
+              <option value="sales">Sales</option>
+            </select>
             <!-- Sales:<input type="number" name="sales"> -->
             Quantidade:<input type="number" name="amount">
             <input type="submit" value="userInput">

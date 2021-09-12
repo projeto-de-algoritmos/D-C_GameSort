@@ -32,7 +32,7 @@ func RenderForms(w http.ResponseWriter, r *http.Request) {
 		r.ParseForm()
 
 		flag := strings.Join(r.Form["flag"], "")
-		reverse, _ := strconv.Atoi(strings.Join(r.Form["revese"], ""))
+		reverse, _ := strconv.Atoi(strings.Join(r.Form["reverse"], ""))
 		amount, _ := strconv.Atoi(strings.Join(r.Form["amount"], ""))
 
 		flagReverse := false
