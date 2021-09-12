@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>GameSort</title>
+  </head>
+  <body>
+    <h1>Lista de games</h1>
+    <h1>{{.Amount}}</h1>
+    <ul>
+      {{range $index, $element := .Games}}
+        <li>Jogo {{.GetName}} - Ano {{.GetYear}} - Vendas {{.GetSales}}</li>
+      {{end}}
+    </ul>
+  </body>
+</html>
