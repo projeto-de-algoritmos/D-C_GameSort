@@ -6,6 +6,8 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
+
+	"github.com/projeto-de-algoritmos/D-C_GameSort/src/dataset"
 )
 
 type Data struct {
@@ -18,11 +20,7 @@ var slice = make([]Game, 0)
 func RenderForms(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.Method)
 	if r.Method == "GET" {
-		// if len(slice) != 0 {
-		// 	mergeSort(slice, false, "name")
-		// 	fmt.Println(slice)
-		// }
-		tmpl := template.Must(template.ParseFiles("templates/index.html"))
+		tmpl := template.Must(template.ParseFiles("../templates/index.html"))
 		data := Data{
 			Games:  slice,
 			Amount: 1,
@@ -40,9 +38,9 @@ func RenderForms(w http.ResponseWriter, r *http.Request) {
 			flagReverse = true
 		}
 
-		gamesList := extractData()
+		gamesList := dataset.ExtractData()
 		gamesList = mergeSort(gamesList, flagReverse, flag)
-		tmpl := template.Must(template.ParseFiles("templates/list.html"))
+		tmpl := template.Must(template.ParseFiles("../templates/list.html"))
 		data := Data{
 			Games:  gamesList[:amount],
 			Amount: amount,
@@ -51,22 +49,10 @@ func RenderForms(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func RenderList(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Amount:", r.Form["amount"])
-	amount, _ := strconv.Atoi(strings.Join(r.Form["amount"], ""))
-	fmt.Println(amount)
-	gamesList := extractData()
-	gamesList = mergeSort(gamesList, false, "name")
-	tmpl := template.Must(template.ParseFiles("templates/list.html"))
-	data := Data{
-		Games:  gamesList,
-		Amount: amount,
-	}
-	tmpl.Execute(w, data)
-}
-
 func main() {
 	http.HandleFunc("/", RenderForms)
-	http.HandleFunc("/result", RenderList)
+
+	fmt.Println("The url is: localhost:8080")
+
 	http.ListenAndServe(":8080", nil)
 }
