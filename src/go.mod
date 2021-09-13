@@ -1,4 +1,4 @@
-module github.com/projeto-de-algoritmos/D-C_GameSort
+module github.com/projeto-de-algoritmos/D-C_GameSort/src
 
 go 1.17
 

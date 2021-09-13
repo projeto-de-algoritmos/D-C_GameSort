@@ -1,14 +1,16 @@
 package main
 
-func mergeSort(items []Game, isReverse bool, flag string) []Game {
+import "github.com/projeto-de-algoritmos/D-C_GameSort/src/model"
+
+func mergeSort(items []model.Game, isReverse bool, flag string) []model.Game {
 	var num = len(items)
 	if num == 1 {
 		return items
 	}
 	middle := int(num / 2)
 	var (
-		left  = make([]Game, middle)
-		right = make([]Game, num-middle)
+		left  = make([]model.Game, middle)
+		right = make([]model.Game, num-middle)
 	)
 	for i := 0; i < num; i++ {
 		if i < middle {
@@ -21,8 +23,8 @@ func mergeSort(items []Game, isReverse bool, flag string) []Game {
 	return merge(mergeSort(left, isReverse, flag), mergeSort(right, isReverse, flag), isReverse, flag)
 }
 
-func merge(left, right []Game, isReverse bool, flag string) (result []Game) {
-	result = make([]Game, len(left)+len(right))
+func merge(left, right []model.Game, isReverse bool, flag string) (result []model.Game) {
+	result = make([]model.Game, len(left)+len(right))
 
 	i := 0
 
