@@ -8,14 +8,15 @@ import (
 	"strings"
 
 	"github.com/projeto-de-algoritmos/D-C_GameSort/src/dataset"
+	"github.com/projeto-de-algoritmos/D-C_GameSort/src/model"
 )
 
 type Data struct {
-	Games  []Game
+	Games  []model.Game
 	Amount int
 }
 
-var slice = make([]Game, 0)
+var slice = make([]model.Game, 0)
 
 func RenderForms(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.Method)
