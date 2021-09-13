@@ -7,8 +7,8 @@ import (
 	"github.com/projeto-de-algoritmos/D-C_GameSort/src/model"
 )
 
-func ExtractData() []model.Game {
-	gamesFile, err := os.OpenFile("games.csv", os.O_RDWR|os.O_CREATE, os.ModePerm)
+func ExtractData(csvFile string) []model.Game {
+	gamesFile, err := os.OpenFile(csvFile, os.O_RDWR|os.O_CREATE, os.ModePerm)
 	if err != nil {
 		panic(err)
 	}

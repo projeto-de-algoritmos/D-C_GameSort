@@ -39,7 +39,7 @@ func RenderForms(w http.ResponseWriter, r *http.Request) {
 			flagReverse = true
 		}
 
-		gamesList := dataset.ExtractData()
+		gamesList := dataset.ExtractData("dataset/games.csv")
 		gamesList = mergeSort(gamesList, flagReverse, flag)
 		tmpl := template.Must(template.ParseFiles("../templates/list.html"))
 		data := Data{
