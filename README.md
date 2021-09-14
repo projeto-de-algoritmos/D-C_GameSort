@@ -1,7 +1,7 @@
 # D-C_GameSort
 
 **Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Conteúdo da Disciplina**: Dividir para conquistar<br>
 
 ## Alunos
 |Matrícula | Aluno |
@@ -21,10 +21,38 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Pode se utilizar o projeto de duas maneiras, sendo elas:
+* Usando um container Docker
+* Executando apartir do código usando o Go em sua máquina local
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+#### Docker
+Tendo o docker instalado na sua máquina utilize os seguinte comandos:
+
+* Para construir a imagem da aplicação
+
+```bash
+docker build -t gamesort .
+```
+* Para executar a aplicação
+
+```bash
+docker run --name myGameSort -p 3000:8080 -d gamesort
+```
+A aplicação estará disponivel em [localhost:3000](localhost:3000)
+
+
+* Para parar o a execução do projeto em sua máquina
+
+```bash
+docker stop myGameSort
+```
+#### Go
+
+Tendo a linguagem Go instalada em sua máquina execute o seguinte comando e acessar [localhost:8080]:
+
+```bash
+cd src && go run *.go
+```
 
 
 
