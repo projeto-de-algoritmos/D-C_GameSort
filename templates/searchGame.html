@@ -17,23 +17,13 @@
         </a>
     </div>
     <div class="container">
-      <h1 class="mb-3">Lista de games</h1>
-        {{range $index, $element := .Games}}
-          <div class="card w-75 mb-2">
-            <div class="card-body">
-              <h5 class="card-title">{{$index}} - {{.GetName}}</h5>
-              <p><b>Ano:</b> {{.GetYear}} </p>
-              <p><b>Vendas:</b> {{.GetSales}}</p>
-            </div>
-          </div>
-        {{end}}
-
-      <!-- <ol> -->
-      <!--   {{range $index, $element := .Games}} -->
-      <!--   <li><b>Jogo:</b> {{.GetName}} - <b>Ano:</b> {{.GetYear}} <b>Vendas:</b> {{.GetSales}}</li> -->
-      <!--   {{end}} -->
-      <!-- </ol> -->
-
+      <h1>Qual jogo você gostaria de buscar?</h1>
+      <form action="/search" method="post">
+              Nome do jogo:
+              <input class="form-control" type="text" name="name">
+              <br/>
+              <input type="submit" value="Enviar">
+      </form>
     </div>
   </body>
 </html>
