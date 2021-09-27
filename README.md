@@ -13,7 +13,15 @@
 O Projeto consiste em trabalhar utilizando os dados existentes no arquivo `vgsales.csv` de maneira a utilizar os algoritmos de dividir para conquistar como **MergeSort**.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+* **Home do projeto**
+![](./assets/print1.png)
+
+* **Resultado de uma busca**
+![](./assets/print2.png)
+
+* **Busca binaria**
+![](./assets/print3.png)
 
 ## Instalação 
 **Linguagem**: xxxxxx<br>
